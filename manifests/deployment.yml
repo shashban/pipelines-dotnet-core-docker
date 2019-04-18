@@ -1,0 +1,16 @@
+apiVersion : apps/v1beta1
+kind: Deployment
+metadata:
+  name: shashbanpipelinesdotnetcoredocker 
+spec:
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: shashbanpipelinesdotnetcoredocker 
+    spec:
+      containers:
+        - name: shashbanpipelinesdotnetcoredocker 
+          image: atulmakshelm.azurecr.io/shashbanpipelinesdotnetcoredocker 
+          ports:
+          - containerPort: 3000
